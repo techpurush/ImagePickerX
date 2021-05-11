@@ -4,7 +4,7 @@ How to use:
 
 1)Add storage permission to your manifest.
 
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  "android.permission.READ_EXTERNAL_STORAGE""
 
 2)Add this at project level:
 
