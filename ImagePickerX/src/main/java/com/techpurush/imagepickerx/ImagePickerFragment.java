@@ -39,7 +39,7 @@ public class ImagePickerFragment extends Fragment {
         Intent intent = new Intent ();
         intent.setAction ( Intent.ACTION_PICK );
         intent.setDataAndType ( MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*" );
-        //intent.putExtra("crop", "true");
+        intent.putExtra("crop", "true");
         startActivityForResult ( intent, PICK_IMAGE );
 
 
