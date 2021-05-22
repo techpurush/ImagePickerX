@@ -67,6 +67,7 @@ public class ImagePickerFragment extends Fragment {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data1);
 
                     this.getPickedImage.pickedImage(bitmap);
+                    this.getPickedImage.pickedImage(data1);
 
                 } catch (IOException e) {
                     e.printStackTrace();

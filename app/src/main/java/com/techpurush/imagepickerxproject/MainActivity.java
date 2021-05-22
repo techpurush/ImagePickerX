@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -36,9 +37,16 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void pickedImage(Bitmap bitmap) {
 
+
+
+                                    }
+
+                                    @Override
+                                    public void pickedImage(Uri imageUri) {
+
                                         ImageView imageView = findViewById(R.id.imageView);
 
-                                        imageView.setImageBitmap(bitmap);
+                                        imageView.setImageURI(imageUri);
 
                                     }
                                 });
