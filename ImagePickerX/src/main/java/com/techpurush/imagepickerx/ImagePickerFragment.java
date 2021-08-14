@@ -13,6 +13,8 @@ import androidx.annotation.Nullable;
 
 import java.io.IOException;
 
+import static android.app.Activity.RESULT_OK;
+
 public class ImagePickerFragment extends Fragment {
 
     GetPickedImage getPickedImage;
@@ -55,7 +57,7 @@ public class ImagePickerFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_IMAGE) {
+        if (requestCode == PICK_IMAGE && resultCode == RESULT_OK) {
             final Bundle extras = data.getExtras();
             if (extras != null) {
                 //Get image
